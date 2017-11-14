@@ -1,0 +1,23 @@
+{
+  "name": "expressproj",
+  "version": "1.0.0",
+  "description": "Project to mess around with expressjs and mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "babel-version": "babel --version"
+  },
+  "author": "Jake Butler",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
