@@ -1,3 +1,5 @@
+import {addNewcontact, getContacts. getContactWithID } from '../controllers/epController';
+
 const routes = (app) => {
 	app.route('/contact')
 	.get((req, res) =>{
@@ -5,13 +7,14 @@ const routes = (app) => {
 		console.log(`Request from: ${req.originalUrl}`)
 		console.log(`Request from: ${req.method}`)
 		next();
-},(req, res, next) => {
-		res.send('GET request successful');
-})
-	.post((req, res) =>
-		res.send('POST request successful'));
+}, getContacts)
+	.post(addNewcontact);
 
 	app.route('/contact/:contactId')
+
+	.get(getContactWithID)
+
+
 	.put((req, res) =>
 		res.send('Put request successful'))
 
